@@ -1,0 +1,68 @@
+<!--
+web === internet > false
+internet 안에 web, email, ftp가 존재한다.
+web server와 web browser 가 통신하는 규약인 http(hyper text transfer protocol) 만들어진다.
+txt 파일만을 화면에 띄워주는 것이 아니라 화면을 굵게 하고 화면을 이쁘게 다듬고 하는 마크업을 하는 언어가 바로 HTML이다.
+HTML (Hyper Text Markup Language)
+HTML로 홈페이지를 마크업 하고 JS로 동적인 페이지를 작성할 수 있다. 그래서 JS를 배우는 이유이다.
+<head> 태그 사이에 메타데이터를 입력한다. / 메타데이터란 데이터를 설명하는 데이터를 의미한다.
+
+
+// <a herf="이동할 페이지 링크" title="그냥 설명" target="optional"> 화면에 나오는 글자 </a>
+target option 
+1. 기입 X > 현재 창에서 이동한다.
+2. blank > 새창에서 이동한다.
+3. _self > 1번과 동일하게 작동한다.
+4. "" > 기입을 한 내용이 마우스를 링크 위에 올리면 나타난다.
+5. 다른 프레임에 속성값을 주고 그 속성값을 입력하면 프레임 내에서 동작시킬 수도 있다.
+
+// 문단 <p> 글을 묶는 작은 단위 이렇게 묶어두면 실제 책의 문단처럼 띄워서 처리시켜준다.
+// 줄바꿈 <br/>
+// 띄어쓰기 &nbsp;   > HTML은 띄어쓰기를 많이하더라도 한번만 인식한다 그래서 따로 명령어를 사용해야한다.
+// 이미지 파일 <img src="이미지가 위치하는 URL" alt="대체텍스트" width="폭" height="높이" logdesc="링크" />
+    대체텍스트는 이미지가 로딩이 느리거나 로딩에 실패하면 뜨는 대체텍스트이다.
+    링크는 이미지에 링크를 달 수 있는 옵션이다.
+
+// 목록 
+<ul>  //순서가 없는 리스트 (unordered list)
+    <li>항목</li>
+    <li>항목</li>
+</ul>
+
+<ol>  //순서가 있는 리스트 (ordered list)
+    <li>항목</li>
+    <li>항목</li>
+</ol>
+
+// 페이지 안에 프레임을 넣어 그 프레임 안에 다른 페이지를 보여주는 것 iframe
+<iframe src="불러올 웹페이지의 URL" scrolling="스크롤링 허용여부"> iframe을 지원하지 않는 경우 대체정보를 제공 </iframe>
+// iframe과 달리 frame 태그는 페이지를 꽉 채워서 나눠 보여준다.
+// 이스케이프 > 특정 명령어를 입력하면 태그와 같이 화면에 나올 수 없는 태그들도 보여준다.
+&amp; → &
+&lt; → <
+&gt; → >
+&quot; → "
+&apos; → '
+
+// 테이블을 만드는데 사용되는 태그들이다. 행 (tr), 열 (td)로 형식을 만들 수 있다.
+// HEAD > <head> 태그는 문서를 설명하는 태그들이 위치하는 태그다. 
+    <body> 태그가 웹페이지가 담아내려는 정보 그 자체라면 head 태그는 body 태그의 정보를 설명하는 메타 정보라고 할 수 있다.
+// Meta 태그는 문서에 대한 정보를 기술한다. name을 기술하고 content를 적어서 이 문서에 대한 정보를 나타낼 수 있다.
+// title 태그는 웹을 켜면 탭에 나오는 문자를 정의할 수 있다. 이는 검색엔진에서 중요한 정보로 취급된다.
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
