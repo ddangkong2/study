@@ -125,15 +125,72 @@ JIT 컴파일러는 인터프리터 방식의 단점을 보완하기 위해 도�
 정적 - 실행 시간 전에 일어남. 실행 시간에는 변하지 않는 상태로 유지.
 동적 - 실행 시간에 이루어지거나 실행 시간에 변경됨.
 
-// this 연산자
-// 클로져
-// (Lexical) 렉시컬 스코프, 렉시컬 환경
-// 쿠버네티스, 도커, AWS, 
 
+> JS 존나 이상한 스코프
+for, if문과 같이 사용된 변수는 전역이다. 그 for, if문 밖에서 변수의 접근이 가능하다. 함수 내에서 만들어진 것만이 지역변수의 특성을 가진다.
+> JS는 함수가 선언된 시점에서의 유효범위를 가진다. 이러한 유효범위의 방식을 정적 유효범위, 렉시컬이라고 한다.
+//예제
+var i = 5;
+function a(){
+  var i = 10;
+  b();
+}
+function b(){
+  document.write(i);
+}
+a();
+
+여기서 a가 b를 호출해서 i는 10이라고 생각할 수 있지만 b 함수가 신언되어 있는 곳은 window.b()이기 떄문에 전역변수 i를 찾아서 출력하게 된다.
+
+
+//클로져
+function outter(){
+  var title = 'coding everybody';
+  return function(){
+    alert(title);
+  }
+}
+inner = outter(); > 여기서 return 된 것은 function()이다. 그리고 저 함수는 만들어지고 사라졌음에도 불구하고 inner()를 통해 title을 받아온다는 것이다.
+inner();
 
 
 
 // DOM, BOM, Virtual DOM in React Library, CSSOM, 렌더 트리
+> Virtual DOM 
+리액트에서는 DOM을 직접 만지는 것이 느린 것을 감안해 가상의 DOM을 만들어 놓는다.
+state가 바뀜을 인지하면 virtual DOM에서 변화가 생기고 이를 DOM과 비교해 바뀐 부분만을 다시 렌더링 시킨다. 이렇게 함으로써 전체적인 DOM을 렌더링하지 않고 빠르게 작동시킬 수 있다.
+
+
+> 렌더트리
+HTML 및 CSS 트리구조가 모두 생성되면 둘을 합쳐 최종적으로 브라우저에 표기될 것들만 선별해 생성시키는 것이 렌더 트리다.
+렌더 트리 동작 순서
+1. DOM 트리 상의 루트부터 시작해서 각 노드를 순회한다.
+2. 보이지 않는 노드를 생략한다.
+3. 표시되는 각 노드에 대해 적절하게 일치하는 CSSOM 규칙을 찾아 적용한다.
+4. 계산된 스타일과 함꼐 보이는 노드를 내보낸다.
+5. 마지막으로 화면에 계산된 스타일을 포함하는 렌더트리를 출력한다.
+
+
+
+> CSSOM (CSS Object Model)
+HTML을 파싱하여 자료를 구조화 한것을 DOM이라 하고 CSS 내용을 파싱하여 자료를 구조화 한 것을 CSSOM이라 한다. 
+CSS는 적용함에 있어 트리 구조가 필요한가 싶을 수 있지만 중첩, 상속을 따라 CSS가 생성되기에 트리구조로 만들어진다.
+
+ 
+> BOM (Browser Object Model) 브라우저 객체 모델
+웹페이지의 내용을 제외한 브라우저창에 포함된 모든 객체 요소들을 의미한다.
+DOM과 BOM의 차이점은 DOM은 document, 현재 눈에 보이는 웹문서에 대한 제어와 변경을 해주었다면, BOM은 window 속성에 속하여 document가 아닌, window를 제어합니다.
+window 객체를 통해
+location 객체 : url 주소에 대한 정보를 제공
+window 객체 : 최상위 객체로 각 프레임별로 하나씩 존재
+document 객체 : 현재 문서에 대한 정보
+
+DOM과 BOM 잘 설명해놓은 사이트
+https://cbw1030.tistory.com/46
+DOM과 BOM의 차이를 잘 설명한 사이트
+https://kevinthegrey.tistory.com/14
+
+
 > DOM (Document Object Model)로써 웹 프라우저가 HTML 파일을 파싱하며 만드는 렌더 트리를 의미한다. 
 > DOM과 HTML은 같지 않다. 
  1. 작성된 HTML 문서가 유효하지 않으면 DOM은 스스로 교정을 한다.
@@ -145,3 +202,10 @@ JIT 컴파일러는 인터프리터 방식의 단점을 보완하기 위해 도�
  1. 개발도구의 요소 검사기는 DOM과 가까운 근사치를 보여주는데 개발 도구는 DOM에 없는 추가적인 정보를 포함한다.
 
 */
+
+// this, bind 연산자
+// 클로져
+// (Lexical) 렉시컬 스코프, 렉시컬 환경
+// 쿠버네티스, 도커, AWS,
+// value & reference의 차이
+// https://chati.tistory.com/150
