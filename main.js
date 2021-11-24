@@ -210,3 +210,4 @@ https://kevinthegrey.tistory.com/14
 // value & reference의 차이
 // https://chati.tistory.com/150
 // bind > 양방향, 단방향 바인딩에 대해
+// git flow 공부하기
