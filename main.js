@@ -207,6 +207,7 @@ https://kevinthegrey.tistory.com/14
 // 클로져
 // (Lexical) 렉시컬 스코프, 렉시컬 환경
 // 쿠버네티스, 도커, AWS,
+// 쿠버네티스나 도커는 백엔드 지식이므로 프론트엔드를 마스터하고 천천히 봐도 될꺼같다.
 // value & reference의 차이
 // https://chati.tistory.com/150
 // bind > 양방향, 단방향 바인딩에 대해
