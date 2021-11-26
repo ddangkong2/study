@@ -212,9 +212,8 @@ https://kevinthegrey.tistory.com/14
 // https://chati.tistory.com/150
 // bind > 양방향, 단방향 바인딩에 대해
 // git flow 공부하기
+// react 책 한번 훑고 react 공식 문서도 봐야할거 같음
+// 기본적인 내용이 탄탄해야 나중에 안 헤매더라
 
-<<<<<<< .merge_file_a07408
 // 여기는 master지롱 conflict 맛이나 봐라
-=======
 //test용 주석
->>>>>>> .merge_file_a01180
